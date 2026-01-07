@@ -12,7 +12,7 @@ if (!api_key || !api_secret) {
 }
 
 cloudinary.config({
-  cloud_name: "yogesh",
+  cloud_name: "dppnbsjcc",
   api_key: api_key,
   api_secret: api_secret,
 });
@@ -30,7 +30,6 @@ export const uploadOnCloudinary = async (localFilePath: string) => {
     // Success!
     console.log("File uploaded on Cloudinary:", response.url);
 
-    // 🔥 ALWAYS remove the local file after upload
     if (fs.existsSync(localFilePath)) {
       fs.unlinkSync(localFilePath);
     }
